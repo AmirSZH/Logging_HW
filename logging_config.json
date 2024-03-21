@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "formatters": {
+        "basic_formatter": {
+            "format": "%(asctime)s %(levelname)s: %(message)s"
+        }
+    },
+    "handlers": {
+        "file_handler": {
+            "class": "logging.FileHandler",
+            "filename": "log_file.log",
+            "mode": "w",
+            "formatter": "basic_formatter"
+        },
+        "stream_handler": {
+            "class": "logging.StreamHandler",
+            "formatter": "basic_formatter"
+        }
+    },
+    "loggers": {
+        "": {
+            "handlers": ["file_handler", "stream_handler"],
+            "level": "INFO"
+        }
+    }
+}
